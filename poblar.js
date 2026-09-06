@@ -1,4 +1,4 @@
-const DATABASE_URL = "https://mineria-practica2-default-rtdb.firebaseio.com/:null";
+const DATABASE_URL = "https://mineria-practica2-default-rtdb.firebaseio.com";
 const CANTIDAD_A_GENERAR = 98;
 
 
