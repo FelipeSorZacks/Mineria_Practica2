@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resultados - Encuesta Remodelación del Hogar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Resultados de la encuesta</h1>
+  <p class="subtitulo">
+    Esta página se actualiza en tiempo real: cada vez que alguien responde la
+    encuesta, los conteos y porcentajes se recalculan automáticamente.
+  </p>
+
+  <nav class="navegacion">
+    <a href="index.html">← Volver al formulario</a>
+  </nav>
+
+  <div class="resumen-numerico" id="resumen-numerico">
+    <!-- Total de respuestas y estadísticas de edad, generado por resultados.js -->
+  </div>
+
+  <div id="contenedor-resultados">
+    <p>Cargando datos...</p>
+  </div>
+
+  <!-- SDKs de Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+
+  <script src="config.js"></script>
+  <script src="preguntas.js"></script>
+  <script src="resultados.js"></script>
+</body>
+</html>

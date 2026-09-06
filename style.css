@@ -1,0 +1,163 @@
+/* style.css
+   Estilo simple y funcional. Sin frameworks, sin decoración innecesaria:
+   el objetivo del proyecto son los datos, no el diseño visual. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+  color: #222;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+p.subtitulo {
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 14px 16px;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 6px;
+}
+
+label {
+  display: block;
+  margin: 6px 0;
+  cursor: pointer;
+}
+
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+
+input[type="radio"] {
+  margin-right: 8px;
+}
+
+button {
+  background: #2c6e49;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #21532f;
+}
+
+button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+#mensaje-estado {
+  margin-top: 16px;
+  font-weight: bold;
+}
+
+#mensaje-estado.ok {
+  color: #2c6e49;
+}
+
+#mensaje-estado.error {
+  color: #b02a2a;
+}
+
+/* --- Estilos para resultados.html --- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 8px;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  text-align: left;
+}
+
+th {
+  background: #f0f0f0;
+}
+
+td.numero {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.bloque-pregunta {
+  margin-bottom: 32px;
+}
+
+.resumen-numerico {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  background: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin-bottom: 24px;
+}
+
+.resumen-numerico div {
+  min-width: 90px;
+}
+
+.resumen-numerico span {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.resumen-numerico small {
+  color: #555;
+}
+
+nav.navegacion {
+  margin-bottom: 20px;
+}
+
+nav.navegacion a {
+  color: #2c6e49;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav.navegacion a:hover {
+  text-decoration: underline;
+}
