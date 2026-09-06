@@ -1,22 +1,10 @@
-/**
- * config.js
- * -----------------------------------------------------------------------
- * PEGA AQUÍ los datos de tu proyecto de Firebase.
- * Los obtienes en: Firebase Console > Configuración del proyecto (ícono de
- * engrane) > "Tus apps" > app web > "Configuración del SDK".
- *
- * Es el ÚNICO archivo que necesitas editar para conectar el proyecto a tu
- * propia base de datos. index.html, resultados.html y poblar.js dependen
- * de databaseURL para funcionar.
- * -----------------------------------------------------------------------
- */
-
 const firebaseConfig = {
-  apiKey: "TU_API_KEY_AQUI",
-  authDomain: "TU_PROYECTO.firebaseapp.com",
-  databaseURL: "https://TU_PROYECTO-default-rtdb.firebaseio.com", // OJO: es el que usa poblar.js también
-  projectId: "TU_PROYECTO",
-  storageBucket: "TU_PROYECTO.appspot.com",
-  messagingSenderId: "000000000000",
-  appId: "1:000000000000:web:xxxxxxxxxxxxxxxxxxxxxx",
+  apiKey: "AIzaSyAEem-BuNIvPUSSgujvO-DiBvjJX2Z0Az0",
+  authDomain: "mineria-practica2.firebaseapp.com",
+  databaseURL: "https://mineria-practica2-default-rtdb.firebaseio.com",
+  projectId: "mineria-practica2",
+  storageBucket: "mineria-practica2.firebasestorage.app",
+  messagingSenderId: "734359019641",
+  appId: "1:734359019641:web:27f9d2353323cc49af74a8",
+  measurementId: "G-D9NEHZ5Q2Q"
 };
