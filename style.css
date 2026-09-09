@@ -123,6 +123,63 @@ td.numero {
   margin-bottom: 32px;
 }
 
+.fila-datos-basicos {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.fila-datos-basicos .bloque-pregunta {
+  flex: 1 1 260px;
+  margin-bottom: 0;
+}
+
+.contenedor-grafica-ancha {
+  width: 100%;
+  max-width: 420px;
+  height: 220px;
+}
+
+.fila-pregunta {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.fila-pregunta table {
+  flex: 1 1 260px;
+  margin-bottom: 0;
+}
+
+.contenedor-grafica {
+  flex: 0 0 220px;
+  width: 220px;
+  height: 220px;
+}
+
+.bloque-abierta {
+  margin-bottom: 28px;
+}
+
+.lista-respuestas {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lista-respuestas li {
+  background: #f7f7f7;
+  border: 1px solid #ddd;
+  border-left: 4px solid #2c6e49;
+  border-radius: 4px;
+  padding: 10px 14px;
+}
+
 .resumen-numerico {
   display: flex;
   gap: 24px;
