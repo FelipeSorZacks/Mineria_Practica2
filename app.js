@@ -1,3 +1,18 @@
+/**
+ * app.js
+ * -----------------------------------------------------------------------
+ * 1. Construye dinámicamente el HTML de las preguntas (a partir de
+ *    preguntas.js), para no repetir <fieldset> a mano y evitar errores.
+ * 2. Al enviar el formulario, arma un objeto "registro" y lo guarda en
+ *    Firebase Realtime Database dentro del nodo "respuestas".
+ * -----------------------------------------------------------------------
+ */
+
+// Inicializa Firebase con la configuración de config.js
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+
+// ---------------------------------------------------------------------
 // 1) CONSTRUCCIÓN DINÁMICA DEL FORMULARIO
 // ---------------------------------------------------------------------
 
