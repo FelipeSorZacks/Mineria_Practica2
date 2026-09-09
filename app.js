@@ -1,18 +1,3 @@
-/**
- * app.js
- * -----------------------------------------------------------------------
- * 1. Construye dinámicamente el HTML de las preguntas (a partir de
- *    preguntas.js), para no repetir <fieldset> a mano y evitar errores.
- * 2. Al enviar el formulario, arma un objeto "registro" y lo guarda en
- *    Firebase Realtime Database dentro del nodo "respuestas".
- * -----------------------------------------------------------------------
- */
-
-// Inicializa Firebase con la configuración de config.js
-firebase.initializeApp(firebaseConfig);
-const db = firebase.database();
-
-// ---------------------------------------------------------------------
 // 1) CONSTRUCCIÓN DINÁMICA DEL FORMULARIO
 // ---------------------------------------------------------------------
 
@@ -71,11 +56,22 @@ form.addEventListener("submit", (evento) => {
   evento.preventDefault();
 
   const datos = new FormData(form);
+  const edad = Number(datos.get("edad"));
+
+  // Validación extra de edad: el <input type="number" min="15" max="99">
+  // ya bloquea esto en la mayoría de los casos, pero esta comprobación es
+  // un respaldo por si el navegador no la aplica (o alguien manipula el
+  // formulario), evitando que se guarde un número negativo o fuera de rango.
+  if (!Number.isFinite(edad) || edad < 15 || edad > 99) {
+    mensajeEstado.textContent = "La edad debe ser un número entre 15 y 99.";
+    mensajeEstado.className = "error";
+    return;
+  }
 
   // Arma el registro que se guardará en la base de datos.
   const registro = {
     sexo: datos.get("sexo"),
-    edad: Number(datos.get("edad")),
+    edad,
     timestamp: Date.now(), // útil para ordenar u observar la evolución de la muestra
   };
 
